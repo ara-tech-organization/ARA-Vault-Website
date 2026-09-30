@@ -1,0 +1,56 @@
+:root {
+  /* Colors */
+  --brand-primary: #7c00d5;
+  --brand-primary-end: #9500ff;
+  --text-primary: #17171f;
+  --text-secondary: #5c5c6b;
+  --text-muted: #74747f;
+  --text-brand: #7c00d5;
+  --text-on-brand: #ffffff;
+  --icon-brand: #7c00d5;
+  --icon-muted: #74747f;
+  --bg-page: #ffffff;
+  --bg-subtle: #fafafc;
+  --bg-tint: #f8f2ff;
+  --bg-tint-strong: #f1e4ff;
+  --bg-lavender: #faf7ff;
+  --bg-inverse: #17171f;
+  --border-default: #e6e6ec;
+  --border-strong: #c9c9d2;
+  --border-subtle-brand: #ead6ff;
+
+  /* Elevation */
+  --shadow-sm: 0 2px 6px rgba(23, 23, 31, 0.05);
+  --shadow-md: 0 6px 18px rgba(23, 23, 31, 0.07), 0 1px 3px rgba(23, 23, 31, 0.04);
+  --shadow-lg: 0 18px 44px rgba(23, 23, 31, 0.1), 0 2px 6px rgba(23, 23, 31, 0.05);
+  --shadow-xl: 0 32px 72px rgba(23, 23, 31, 0.14), 0 4px 12px rgba(23, 23, 31, 0.06);
+  --shadow-brand: 0 14px 34px rgba(124, 0, 213, 0.22);
+  --glow-brand-soft: 0 24px 64px rgba(124, 0, 213, 0.18);
+  --glow-card: 0 10px 28px rgba(124, 0, 213, 0.1), 0 1px 3px rgba(23, 23, 31, 0.04);
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-wordmark: 'Montserrat', var(--font-sans);
+
+  /* Layout */
+  --page-max-width: 1440px;
+  --content-max-width: 1200px;
+  --gutter: clamp(20px, 5vw, 120px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  background: var(--bg-page);
+}
+
+.container {
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}

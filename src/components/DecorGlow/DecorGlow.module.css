@@ -1,0 +1,16 @@
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 0, 213, 0.16) 0%, rgba(124, 0, 213, 0) 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle-brand);
+  pointer-events: none;
+  z-index: 0;
+}

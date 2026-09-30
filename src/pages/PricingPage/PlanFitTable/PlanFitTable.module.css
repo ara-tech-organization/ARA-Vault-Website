@@ -1,0 +1,47 @@
+.tableWrap {
+  background: var(--bg-page);
+  border: 1px solid var(--border-subtle-brand);
+  border-radius: 20px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 18px 24px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 21.7px;
+  border-bottom: 1px solid var(--border-subtle-brand);
+}
+
+.table thead th {
+  background: var(--bg-lavender);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.table tbody td {
+  color: var(--text-secondary);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.teamCell {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+@media (max-width: 640px) {
+  .table th,
+  .table td {
+    padding: 14px 16px;
+  }
+}

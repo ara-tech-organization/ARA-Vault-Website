@@ -1,0 +1,12 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: 96px var(--gutter);
+  background: var(--bg-lavender);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 56px var(--gutter);
+  }
+}

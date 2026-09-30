@@ -1,0 +1,43 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: 112px var(--gutter) 120px;
+  background: var(--bg-page);
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 28px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 1.04px;
+  text-transform: uppercase;
+  color: var(--text-brand);
+}
+
+.heading {
+  margin: 0;
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px var(--gutter) 72px;
+  }
+  .eyebrow {
+    margin-bottom: 18px;
+  }
+}

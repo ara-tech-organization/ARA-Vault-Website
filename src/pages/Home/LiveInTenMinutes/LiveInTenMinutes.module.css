@@ -1,0 +1,113 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: 96px var(--gutter);
+  background: var(--bg-lavender);
+}
+
+.steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.connector {
+  position: absolute;
+  top: 50px;
+  left: 46px;
+  right: 46px;
+  height: 2px;
+  background: #bb5cff;
+  opacity: 0.85;
+  border-radius: 1px;
+  z-index: 0;
+}
+
+.step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  padding: 30px 26px;
+  background: var(--bg-page);
+  border: 1px solid var(--border-subtle-brand);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--brand-primary) 0%, var(--brand-primary-end) 100%);
+  color: var(--text-on-brand);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.stepTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+}
+
+.stepDesc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+  height: 48px;
+  padding-inline: 28px;
+  border-radius: 12px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, var(--brand-primary), var(--brand-primary-end));
+  color: var(--text-on-brand);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow-brand);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .connector {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 56px var(--gutter);
+  }
+}
+
+@media (max-width: 520px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}

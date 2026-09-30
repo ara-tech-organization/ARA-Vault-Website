@@ -1,0 +1,266 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 88px var(--gutter) 96px;
+  background: linear-gradient(180deg, #f1e3ff 0%, #fcfaff 65%, #ffffff 100%);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 22px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 1.04px;
+  text-transform: uppercase;
+  color: var(--text-brand);
+}
+
+.heading {
+  margin: 0;
+  font-size: clamp(30px, 5vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-primary);
+  max-width: 1000px;
+}
+
+.subtext {
+  margin: 24px 0 0;
+  max-width: 820px;
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin: 36px 0 0;
+}
+
+.cta {
+  height: 48px;
+  padding-inline: 28px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #7c00d5 0%, #9500ff 100%);
+  color: var(--text-on-brand);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  box-shadow: 0 14px 34px rgba(124, 0, 213, 0.22);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Device mockup card */
+.mockupCard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1200 / 660;
+  margin: 64px 0 0;
+  background: linear-gradient(135deg, #fbf7ff 0%, #f0e2ff 100%);
+  box-shadow: var(--glow-brand-soft);
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.browserMockup {
+  position: absolute;
+  left: 4.7%;
+  top: 22.7%;
+  width: 71.7%;
+  height: 58.5%;
+  background: var(--bg-page);
+  box-shadow: var(--shadow-xl);
+  border-radius: 20px;
+  outline: 1px solid var(--border-subtle-brand);
+  outline-offset: -1px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.browserChrome {
+  flex-shrink: 0;
+  height: 40px;
+  padding-inline: 18px;
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border-default);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  background: var(--border-strong);
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.browserUrl {
+  flex: 1 1 0;
+  height: 24px;
+  padding-inline: 14px;
+  background: var(--bg-page);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.browserUrlText {
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.browserBody {
+  flex: 1 1 0;
+  overflow: hidden;
+  background: var(--bg-lavender);
+}
+
+.browserScreenshot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.phoneMockup {
+  position: absolute;
+  left: 71.5%;
+  top: 8.8%;
+  width: 22.3%;
+  height: 82.6%;
+  padding: 10px;
+  background: var(--bg-inverse);
+  box-shadow: 0 18px 44px rgba(23, 23, 31, 0.1), 0 2px 6px rgba(23, 23, 31, 0.05);
+  border-radius: 40px;
+}
+
+.phoneScreen {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-page);
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandMark {
+  position: relative;
+  flex-shrink: 0;
+}
+.brandMark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.markShackle {
+  position: absolute;
+  inset: 8.34% 31.97% 58.33% 29.17%;
+}
+.markBody {
+  position: absolute;
+  inset: 41.67% 12.5% 8.33% 12.5%;
+}
+.markKeyhole {
+  position: absolute;
+  inset: 62.5% 45.84% 29.17% 45.83%;
+}
+
+/* 76px on the 268px-wide phone from the Figma spec (76 / 268 = 28.4%) */
+.mockBrandMark {
+  width: 28.4%;
+  aspect-ratio: 1;
+}
+
+@media (max-width: 1023px) {
+  .mockupCard {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 32px;
+    background: linear-gradient(135deg, #fbf7ff 0%, #f0e2ff 100%);
+  }
+  .browserMockup,
+  .phoneMockup {
+    position: static;
+    width: 100%;
+  }
+  .browserMockup {
+    max-width: 640px;
+    height: 300px;
+  }
+  .phoneMockup {
+    width: 200px;
+    height: 400px;
+    flex-shrink: 0;
+  }
+  .mockBrandMark {
+    width: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 56px var(--gutter) 64px;
+  }
+  .mockupCard {
+    margin-top: 48px;
+    padding: 20px;
+  }
+  .browserMockup {
+    height: 220px;
+  }
+  .phoneMockup {
+    width: 160px;
+    height: 320px;
+    border-radius: 32px;
+  }
+  .phoneScreen {
+    border-radius: 26px;
+  }
+  .browserUrl {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .actions .cta {
+    width: 100%;
+  }
+  .actions {
+    width: 100%;
+  }
+  .browserMockup {
+    height: 180px;
+  }
+  .phoneMockup {
+    width: 130px;
+    height: 260px;
+  }
+}

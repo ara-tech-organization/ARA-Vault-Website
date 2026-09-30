@@ -1,0 +1,230 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--gutter);
+  height: 80px;
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border-subtle-brand);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.brandMark {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.brandMark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.brandMarkShackle {
+  position: absolute;
+  inset: 5% 27% 55% 24%;
+}
+.brandMarkBody {
+  position: absolute;
+  inset: 38% 9% 5% 9%;
+}
+.brandMarkKeyhole {
+  position: absolute;
+  inset: 58% 42% 26% 42%;
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  white-space: nowrap;
+}
+.wordmarkTop {
+  margin: 0;
+  font-family: var(--font-wordmark);
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 11px;
+  letter-spacing: 0.22px;
+  color: #474747;
+}
+.wordmarkBottom {
+  margin: 0;
+  font-family: var(--font-wordmark);
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 22px;
+  letter-spacing: -0.21px;
+  color: var(--brand-primary);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navItem {
+  padding: 10px 12px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -0.2px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.navItem:hover {
+  color: var(--text-primary);
+}
+
+.navItemActive {
+  color: var(--text-brand);
+  font-weight: 600;
+  background: var(--bg-tint);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.ctaSecondary,
+.ctaPrimary {
+  height: 40px;
+  padding-inline: 28px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ctaSecondary {
+  background: var(--bg-page);
+  border: 1.5px solid var(--brand-primary);
+  color: var(--text-brand);
+}
+.ctaSecondary:hover {
+  background: var(--bg-tint);
+}
+
+.ctaPrimary {
+  background: linear-gradient(90deg, var(--brand-primary), var(--brand-primary-end));
+  border: none;
+  color: var(--text-on-brand);
+  box-shadow: var(--shadow-brand);
+}
+.ctaPrimary:hover {
+  filter: brightness(1.05);
+}
+
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.menuToggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    display: none;
+  }
+  .actions .ctaSecondary {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 64px;
+  }
+  .menuToggle {
+    display: flex;
+  }
+  .right {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--bg-page);
+    border-bottom: 1px solid var(--border-subtle-brand);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 16px var(--gutter) 20px;
+    display: none;
+    box-shadow: var(--shadow-md);
+  }
+  .rightOpen {
+    display: flex;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+  }
+  .navItem {
+    padding: 12px 8px;
+  }
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .actions .ctaSecondary {
+    display: block;
+  }
+  .ctaSecondary,
+  .ctaPrimary {
+    height: 44px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .wordmarkBottom {
+    font-size: 18px;
+  }
+}

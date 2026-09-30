@@ -1,0 +1,175 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: 104px var(--gutter);
+  background: var(--bg-lavender);
+}
+
+.grid {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max-width);
+  margin-inline: auto;
+  display: flex;
+  gap: 96px;
+}
+
+.heading {
+  flex: 0 0 320px;
+  margin: 0;
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+}
+
+.copy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.paragraph {
+  margin: 0;
+  font-size: clamp(16px, 1.3vw, 20px);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max-width);
+  margin: 72px auto 0;
+  padding: 56px;
+  background: var(--bg-page);
+  border-radius: 24px;
+  outline: 1px solid var(--border-subtle-brand);
+  outline-offset: -1px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.parentTile {
+  width: 400px;
+  max-width: 100%;
+  padding: 34px 40px;
+  background: var(--bg-lavender);
+  border-radius: 18px;
+  outline: 1px solid var(--border-subtle-brand);
+  outline-offset: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parentName {
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--text-primary);
+}
+
+.arrow {
+  flex-shrink: 0;
+  color: var(--icon-brand);
+}
+
+.brandTile {
+  width: 400px;
+  max-width: 100%;
+  padding: 30px 40px;
+  background: var(--bg-tint);
+  border-radius: 18px;
+  outline: 1.5px solid var(--border-brand, #bb5cff);
+  outline-offset: -1.5px;
+  box-shadow: var(--glow-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.brandMark {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.brandMark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.markShackle {
+  position: absolute;
+  inset: 5% 27% 55% 24%;
+}
+.markBody {
+  position: absolute;
+  inset: 38% 9% 5% 9%;
+}
+.markKeyhole {
+  position: absolute;
+  inset: 58% 42% 26% 42%;
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.wordmarkTop {
+  margin: 0;
+  font-family: var(--font-wordmark);
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 11px;
+  letter-spacing: 0.22px;
+  color: #474747;
+}
+.wordmarkBottom {
+  margin: 0;
+  font-family: var(--font-wordmark);
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 22px;
+  color: var(--brand-primary);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .heading {
+    flex-basis: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 56px var(--gutter);
+  }
+  .card {
+    margin-top: 40px;
+    padding: 32px 24px;
+    gap: 20px;
+  }
+  .arrow {
+    transform: rotate(90deg);
+  }
+  .parentTile,
+  .brandTile {
+    width: 100%;
+    padding: 24px;
+  }
+}

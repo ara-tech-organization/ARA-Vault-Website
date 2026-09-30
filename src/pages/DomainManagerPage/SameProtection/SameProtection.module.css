@@ -1,0 +1,49 @@
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto 32px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--bg-tint);
+  border: 1px solid var(--border-subtle-brand);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-brand);
+  white-space: nowrap;
+}
+
+.badgeIcon {
+  flex-shrink: 0;
+  color: var(--icon-brand);
+}
+
+.callout {
+  max-width: 720px;
+  margin-inline: auto;
+  padding: 20px 24px;
+  background: var(--bg-tint);
+  border-left: 3px solid var(--brand-primary);
+  border-radius: 12px;
+  text-align: left;
+}
+
+.callout p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .badge {
+    white-space: normal;
+  }
+}

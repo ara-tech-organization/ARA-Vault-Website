@@ -1,0 +1,133 @@
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.copy {
+  max-width: 560px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-brand);
+}
+
+.heading {
+  margin: 0 0 24px;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+}
+
+.desc {
+  margin: 0 0 32px;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta {
+  height: 48px;
+  padding-inline: 28px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, var(--brand-primary), var(--brand-primary-end));
+  color: var(--text-on-brand);
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: var(--shadow-brand);
+  cursor: pointer;
+}
+
+.learnMore {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-brand);
+  text-decoration: none;
+}
+.learnMore:hover {
+  text-decoration: underline;
+}
+
+.phoneWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.phone {
+  width: 260px;
+  height: 540px;
+  border-radius: 44px;
+  background: var(--bg-inverse);
+  padding: 12px;
+  box-shadow: var(--shadow-xl);
+}
+
+.phoneScreen {
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  background: linear-gradient(160deg, var(--bg-tint), var(--bg-page));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phoneMark {
+  position: relative;
+  width: 72px;
+  height: 72px;
+}
+.phoneMark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.markShackle,
+.markBody,
+.markKeyhole {
+  position: absolute;
+}
+.markShackle {
+  inset: 5% 27% 55% 24%;
+}
+.markBody {
+  inset: 38% 9% 5% 9%;
+}
+.markKeyhole {
+  inset: 58% 42% 26% 42%;
+}
+
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+  .copy {
+    max-width: none;
+    margin-inline: auto;
+  }
+  .actions {
+    justify-content: center;
+  }
+  .phone {
+    width: 220px;
+    height: 460px;
+  }
+}
