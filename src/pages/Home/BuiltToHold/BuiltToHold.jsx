@@ -31,9 +31,9 @@ function DemoVisual() {
   )
 }
 
-function ScreenshotVisual({ src, alt, height = 420 }) {
+function ScreenshotVisual({ src, alt }) {
   return (
-    <div className={styles.visualBox} style={{ height }}>
+    <div className={styles.visualBox}>
       <ProductScreenshot flush>
         <img src={src} alt={alt} />
       </ProductScreenshot>
@@ -69,7 +69,6 @@ const BLOCKS = [
       <ScreenshotVisual
         src={rolesPermissionsImg}
         alt="Roles and Permissions page showing Member and Administrator roles with their access levels"
-        height={331}
       />
     ),
     reverse: true,
@@ -89,7 +88,6 @@ const BLOCKS = [
       <ScreenshotVisual
         src={documentsEmptyImg}
         alt="Documents page for creating an encrypted document vault"
-        height={344}
       />
     ),
     reverse: true,
@@ -110,7 +108,6 @@ const BLOCKS = [
       <ScreenshotVisual
         src={dashboardHealthImg}
         alt="Dashboard showing workspace stats, password health and item counts by type"
-        height={369}
       />
     ),
     reverse: true,

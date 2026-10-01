@@ -171,21 +171,12 @@
   .nav {
     display: none;
   }
-  .actions .ctaSecondary {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    height: 64px;
-  }
   .menuToggle {
     display: flex;
   }
   .right {
     position: absolute;
-    top: 64px;
+    top: 80px;
     left: 0;
     right: 0;
     background: var(--bg-page);
@@ -200,7 +191,7 @@
   .rightOpen {
     display: flex;
   }
-  .nav {
+  .rightOpen .nav {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -214,12 +205,21 @@
     align-items: stretch;
   }
   .actions .ctaSecondary {
-    display: block;
+    display: inline-flex;
   }
   .ctaSecondary,
   .ctaPrimary {
     height: 44px;
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 64px;
+  }
+  .right {
+    top: 64px;
   }
 }
 

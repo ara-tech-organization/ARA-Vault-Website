@@ -26,9 +26,11 @@ export default function PlanFitTable() {
             <tbody>
               {ROWS.map((row) => (
                 <tr key={row.team}>
-                  <td className={styles.teamCell}>{row.team}</td>
-                  <td>{row.fit}</td>
-                  <td>{row.cost}</td>
+                  <td className={styles.teamCell} data-label="Your team">
+                    {row.team}
+                  </td>
+                  <td data-label="Best fit">{row.fit}</td>
+                  <td data-label="Example monthly cost">{row.cost}</td>
                 </tr>
               ))}
             </tbody>

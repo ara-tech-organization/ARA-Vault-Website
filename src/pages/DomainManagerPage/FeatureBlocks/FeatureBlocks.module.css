@@ -70,7 +70,7 @@
 }
 
 .visualBox {
-  height: 360px;
+  width: 100%;
 }
 
 @media (max-width: 900px) {
@@ -86,8 +86,5 @@
   .blocks {
     gap: 64px;
     margin-top: 48px;
-  }
-  .visualBox {
-    height: 300px;
   }
 }

@@ -142,7 +142,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: top;
 }
 
@@ -196,32 +196,25 @@
   aspect-ratio: 1;
 }
 
+/*
+ * The browser + phone mockup keeps the same overlapping desktop layout at every
+ * width — all of browserMockup/phoneMockup/the inner glow above are sized with
+ * percentages of .mockupCard (which keeps its 1200:660 aspect-ratio), so they
+ * scale down together instead of switching to a different stacked layout.
+ */
+
 @media (max-width: 1023px) {
-  .mockupCard {
-    aspect-ratio: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    padding: 32px;
-    background: linear-gradient(135deg, #fbf7ff 0%, #f0e2ff 100%);
+  .browserChrome {
+    height: 32px;
+    padding-inline: 12px;
+    gap: 6px;
   }
-  .browserMockup,
-  .phoneMockup {
-    position: static;
-    width: 100%;
-  }
-  .browserMockup {
-    max-width: 640px;
-    height: 300px;
+  .dot {
+    width: 7px;
+    height: 7px;
   }
   .phoneMockup {
-    width: 200px;
-    height: 400px;
-    flex-shrink: 0;
-  }
-  .mockBrandMark {
-    width: 56px;
+    padding: 1.6%;
   }
 }
 
@@ -231,18 +224,16 @@
   }
   .mockupCard {
     margin-top: 48px;
-    padding: 20px;
+    border-radius: 20px;
   }
   .browserMockup {
-    height: 220px;
+    border-radius: 14px;
   }
   .phoneMockup {
-    width: 160px;
-    height: 320px;
-    border-radius: 32px;
+    border-radius: 18%;
   }
   .phoneScreen {
-    border-radius: 26px;
+    border-radius: 15%;
   }
   .browserUrl {
     display: none;
@@ -256,11 +247,20 @@
   .actions {
     width: 100%;
   }
-  .browserMockup {
-    height: 180px;
+  .browserChrome {
+    height: 26px;
+    padding-inline: 8px;
+    gap: 4px;
+  }
+  .dot {
+    width: 5px;
+    height: 5px;
   }
   .phoneMockup {
-    width: 130px;
-    height: 260px;
+    padding: 1.2%;
+    border-radius: 14%;
+  }
+  .phoneScreen {
+    border-radius: 12%;
   }
 }

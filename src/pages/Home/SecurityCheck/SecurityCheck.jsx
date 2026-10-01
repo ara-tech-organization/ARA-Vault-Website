@@ -75,8 +75,12 @@ export default function SecurityCheck() {
             <tbody>
               {READ_TABLE.map((row) => (
                 <tr key={row.hidden}>
-                  <td className={styles.hiddenCol}>{row.hidden}</td>
-                  <td className={styles.visibleCol}>{row.visible}</td>
+                  <td className={styles.hiddenCol} data-label="Stays scrambled">
+                    {row.hidden}
+                  </td>
+                  <td className={styles.visibleCol} data-label="Readable">
+                    {row.visible}
+                  </td>
                 </tr>
               ))}
             </tbody>

@@ -7,8 +7,8 @@ export default function ProductScreenshot({
   children,
 }) {
   return (
-    <div className={`${styles.frame} ${compact ? styles.frameCompact : ''}`}>
-      <div className={styles.container}>
+    <div className={`${styles.frame} ${compact ? styles.frameCompact : ''} ${flush ? styles.frameFlush : ''}`}>
+      <div className={`${styles.container} ${flush ? styles.containerFlush : ''}`}>
         <div className={styles.chrome}>
           <span className={styles.dot} />
           <span className={styles.dot} />

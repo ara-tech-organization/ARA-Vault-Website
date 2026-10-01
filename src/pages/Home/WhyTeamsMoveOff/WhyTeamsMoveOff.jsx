@@ -85,16 +85,14 @@ export default function WhyTeamsMoveOff() {
             <tbody>
               {ROWS.map((row) => (
                 <tr key={row.label}>
-                  <td className={styles.rowLabel} data-label="">
-                    {row.label}
-                  </td>
-                  <td>
+                  <td className={styles.rowLabel}>{row.label}</td>
+                  <td data-label="Spreadsheet / shared doc">
                     <PlainCell value={row.spreadsheet} />
                   </td>
-                  <td>
+                  <td data-label="Chat / email">
                     <PlainCell value={row.chat} />
                   </td>
-                  <td className={styles.brandCol}>
+                  <td className={styles.brandCol} data-label="ARA Vault">
                     <VaultCell {...row.vault} />
                   </td>
                 </tr>

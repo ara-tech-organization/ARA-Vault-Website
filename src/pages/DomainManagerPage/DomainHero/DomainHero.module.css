@@ -118,7 +118,6 @@
 .screenshotWrap {
   width: 100%;
   max-width: 1200px;
-  height: 631px;
   margin: 48px auto 0;
 }
 
@@ -131,7 +130,6 @@
     filter: blur(70px);
   }
   .screenshotWrap {
-    height: 420px;
     margin-top: 32px;
   }
 }
@@ -144,8 +142,5 @@
   .ctaPrimary,
   .ctaSecondary {
     width: 100%;
-  }
-  .screenshotWrap {
-    height: 320px;
   }
 }
